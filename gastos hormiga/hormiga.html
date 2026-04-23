@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos Hormiga - HiloLegal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1>HiloLegal</h1>
+                    <p>Calculadora de Gastos Hormiga</p>
+                </div>
+                <div class="header__stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalAnual">0€</span>
+                        <span class="stat-label">Gasto Anual</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="ahorroAnual">0€</span>
+                        <span class="stat-label">Ahorro Potencial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Introducción -->
+            <section class="intro">
+                <h2>¿Qué son los gastos hormiga?</h2>
+                <p>Los gastos hormiga son pequeños desembolsos diarios que parecen insignificantes, pero que sumados a lo largo del año pueden representar una cantidad considerable de dinero. Calcula cuánto gastas realmente y descubre tu potencial de ahorro.</p>
+            </section>
+
+            <!-- Formulario de gastos -->
+            <section class="gastos-section">
+                <h3>Configura tus gastos hormiga</h3>
+                <div class="gastos-grid" id="gastosGrid">
+                    <!-- Las categorías se cargarán dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Resumen de cálculos -->
+            <section class="resumen-section">
+                <div class="resumen-grid">
+                    <div class="card resumen-card">
+                        <h4>Gasto Diario</h4>
+                        <span class="resumen-value" id="gastoDiario">0€</span>
+                    </div>
+                    <div class="card resumen-card">
+                        <h4>Gasto Semanal</h4>
+                        <span class="resumen-value" id="gastoSemanal">0€</span>
+                    </div>
+                    <div class="card resumen-card">
+                        <h4>Gasto Mensual</h4>
+                        <span class="resumen-value" id="gastoMensual">0€</span>
+                    </div>
+                    <div class="card resumen-card">
+                        <h4>Gasto Anual</h4>
+                        <span class="resumen-value" id="gastoAnualCard">0€</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráficos -->
+            <section class="graficos-section">
+                <div class="graficos-grid">
+                    <div class="card chart-container">
+                        <h4>Distribución por Categoría</h4>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="chartDistribucion"></canvas>
+                        </div>
+                    </div>
+                    <div class="card chart-container">
+                        <h4>Impacto en el Tiempo</h4>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="chartTiempo"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medidor de nivel -->
+                <div class="card niveles-card">
+                    <h4>Nivel de Gastos Hormiga</h4>
+                    <div class="nivel-indicator">
+                        <div class="nivel-bar">
+                            <div class="nivel-fill" id="nivelFill"></div>
+                        </div>
+                        <div class="nivel-labels">
+                            <span>Bajo</span>
+                            <span>Medio</span>
+                            <span>Alto</span>
+                        </div>
+                        <p class="nivel-text" id="nivelText">Introduce tus gastos para ver tu nivel</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simulador de ahorro -->
+            <section class="simulador-section">
+                <div class="card">
+                    <h4>Simulador de Ahorro</h4>
+                    <div class="simulador-grid">
+                        <div class="simulador-option">
+                            <label>Reducción del 50%</label>
+                            <div class="simulador-result">
+                                <span class="simulador-amount" id="ahorro50">0€</span>
+                                <span class="simulador-label">ahorro anual</span>
+                            </div>
+                        </div>
+                        <div class="simulador-option">
+                            <label>Reducción del 75%</label>
+                            <div class="simulador-result">
+                                <span class="simulador-amount" id="ahorro75">0€</span>
+                                <span class="simulador-label">ahorro anual</span>
+                            </div>
+                        </div>
+                        <div class="simulador-option">
+                            <label>Eliminación total</label>
+                            <div class="simulador-result">
+                                <span class="simulador-amount" id="ahorro100">0€</span>
+                                <span class="simulador-label">ahorro anual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Consejos -->
+            <section class="consejos-section">
+                <div class="card">
+                    <h4>Consejos Personalizados de Ahorro</h4>
+                    <div class="consejos-list" id="consejosList">
+                        <!-- Los consejos se cargarán dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparativa -->
+            <section class="comparativa-section">
+                <div class="card">
+                    <h4>Comparativa con la Media Española</h4>
+                    <div class="comparativa-content">
+                        <div class="comparativa-item">
+                            <span class="comparativa-label">Tu gasto mensual:</span>
+                            <span class="comparativa-value" id="tuGastoMensual">0€</span>
+                        </div>
+                        <div class="comparativa-item">
+                            <span class="comparativa-label">Media española:</span>
+                            <span class="comparativa-value">150€</span>
+                        </div>
+                        <div class="comparativa-resultado" id="comparativaResultado">
+                            <!-- Resultado de comparación -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 José Carlos Hidalgo - HiloLegal. Toma el control de tus finanzas.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

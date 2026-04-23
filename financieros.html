@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Financieros · HiloLegal</title>
+    <meta name="description" content="Planificación financiera, ahorro, inversión, pensiones e hipotecas. Damos dirección a tus cifras para que la vida apunte a lo esencial.">
+    
+    <!-- Google Fonts & Font Awesome (como en index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS principal (el mismo que usa index.html) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Elementos comunes de la interfaz (Cursor, Barra de progreso, etc.) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navegación (idéntica a index.html) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="logo hilolegal.png" alt="HiloLegal" class="logo-img"></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="abogados.html" class="nav-link">Abogados</a></li>
+                <li><a href="financieros.html" class="nav-link active">Servicios Financieros</a></li>
+                <li><a href="fincas.html" class="nav-link">Admin. Fincas</a></li>
+                <li><a href="index.html#sobre-nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section para Financieros -->
+    <section id="inicio" class="hero subpage-hero" style="--bg-image: url('area-financieros.jpg');">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <img src="area-financieros.jpg" alt="Servicios Financieros" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line"><span>Servicios Financieros</span></span>
+                    </h1>
+                    <p class="hero-subtitle">El dinero es brújula, no destino. Damos dirección a tus cifras para que la vida apunte a lo esencial.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" data-open-modal data-subarea="Consulta General Financieros">
+                            <span>Quiero mejorar mi situación</span> <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="breadcrumbs-bar">
+        <div class="container">
+            <a href="index.html">Inicio</a> &nbsp;/&nbsp; Servicios &nbsp;/&nbsp; <span>Servicios Financieros</span>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- Contenido específico de la página de Financieros -->
+        <section id="areas-practica" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tu Futuro, Nuestro Plan</h2>
+                    <p class="section-subtitle">Soluciones financieras para construir la vida que deseas</p>
+                    <div class="title-decorator"></div>
+                </div>
+
+                <div class="practice-grid">
+                     <!-- Ahorro -->
+                    <div class="practice-card">
+                        <div class="practice-icon"><i class="fas fa-piggy-bank"></i></div>
+                        <h3>Tu tranquilidad empieza hoy</h3>
+                        <p>Planes de ahorro seguros para proteger tu capital y generar rendimientos. Con garantía diaria y beneficios fiscales, es ideal para tus metas a corto y medio plazo.</p>
+                        <button class="btn btn-primary btn-small" data-open-modal data-subarea="Ahorro Garantizado">Calcula tu plan de ahorro</button>
+                    </div>
+
+                    <!-- Inversión -->
+                    <div class="practice-card">
+                        <div class="practice-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Haz que tu dinero trabaje para ti</h3>
+                        <p>Obtén mayores rendimientos con planes de inversión respaldados por garantías sólidas. Adaptamos el plan a tu perfil de riesgo para que inviertas con total confianza.</p>
+                        <button class="btn btn-primary btn-small" data-open-modal data-subarea="Inversión">Descubre tu potencial</button>
+                    </div>
+
+                    <!-- Pensiones -->
+                    <div class="practice-card">
+                        <div class="practice-icon"><i class="fas fa-umbrella-beach"></i></div>
+                        <h3>Construye la jubilación que sueñas</h3>
+                        <p>Una jubilación tranquila se construye día a día. Diseñamos una estrategia de ahorro a largo plazo que se adapte a tus objetivos, asegurando tu libertad financiera futura.</p>
+                        <button class="btn btn-primary btn-small" data-open-modal data-subarea="Pensiones">Planifica tu jubilación</button>
+                    </div>
+
+                    <!-- Hipotecas -->
+                    <div class="practice-card">
+                        <div class="practice-icon"><i class="fas fa-home"></i></div>
+                        <h3>El camino más corto a tu nuevo hogar</h3>
+                        <p>Te ayudamos a conseguir financiación de hasta el 95% con un gestor personal que te acompaña hasta la firma, haciendo el sueño de tu propia casa una realidad cercana.</p>
+                        <button class="btn btn-primary btn-small" data-open-modal data-subarea="Hipotecas">Estudio hipotecario gratuito</button>
+                    </div>
+                    
+                    <!-- Seguros -->
+                    <div class="practice-card">
+                        <div class="practice-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Protege lo que más te importa</h3>
+                        <p>Ofrecemos una amplia gama de seguros (vida, salud, hogar, coche) para darte la tranquilidad de enfrentar cualquier imprevisto sin comprometer tu futuro.</p>
+                        <button class="btn btn-primary btn-small" data-open-modal data-subarea="Seguros">Encuentra tu seguro ideal</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Contacto (idéntica a index.html) -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">¿Hablamos de tu futuro?</h2>
+                    <p class="section-subtitle">Contacta con nosotros y obtén tu primera consulta financiera</p>
+                    <div class="title-decorator"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Información de Contacto</h3>
+                            <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Teléfono</h4><p><a href="tel:647506040">647 50 60 40</a></p></div></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p><a href="mailto:info@hilolegal.es">info@hilolegal.es</a></p></div></div>
+                            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Dirección</h4><p>Calle Calitx 9, Altea</p></div></div>
+                        </div>
+                        <div class="map-container"><iframe src="https://www.google.com/maps?q=Calle%20Calitx%209%2C%20Altea&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    </div>
+                    <div class="contact-form">
+                        <form class="form" id="pageContactForm">
+                             <h3>Envíanos un Mensaje Directo</h3>
+                             <div class="form-group"><input type="text" id="nombre" name="nombre" required><label for="nombre" class="form-label">Nombre completo</label><span class="form-line"></span></div>
+                             <div class="form-group"><input type="email" id="email" name="email" required><label for="email" class="form-label">Email</label><span class="form-line"></span></div>
+                             <div class="form-group"><input type="tel" id="telefono" name="telefono" required><label for="telefono" class="form-label">Teléfono</label><span class="form-line"></span></div>
+                             <div class="form-group"><textarea id="mensaje" name="mensaje" rows="4" required></textarea><label for="mensaje" class="form-label">Mensaje</label><span class="form-line"></span></div>
+                             <div class="form-group checkbox-group"><input type="checkbox" id="privacidad" name="privacidad" required><label for="privacidad" class="checkbox-label">Acepto la política de privacidad</label></div>
+                             <button type="submit" class="btn btn-primary"><span>Enviar Mensaje</span><i class="fas fa-paper-plane btn-icon"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para captación de leads -->
+    <div id="leadModal" class="modal hidden">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h2>Solicita tu Consulta</h2>
+                <span class="modal-close" id="closeModalBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="leadForm">
+                    <input type="hidden" id="modalSubarea" name="subarea" value="">
+                    <input type="hidden" name="area" value="Servicios Financieros">
+                    <div class="form-group"><input type="text" id="modalNombre" name="nombre" required><label for="modalNombre" class="form-label">Nombre completo</label><span class="form-line"></span></div>
+                    <div class="form-group"><input type="tel" id="modalTelefono" name="telefono" required><label for="modalTelefono" class="form-label">Teléfono</label><span class="form-line"></span></div>
+                    <div class="form-group"><input type="email" id="modalEmail" name="email" required><label for="modalEmail" class="form-label">Email</label><span class="form-line"></span></div>
+                    <button type="submit" class="btn btn-primary btn-full"><span>Solicitar Consulta</span><i class="fas fa-calendar btn-icon"></i></button>
+                    <div id="formMsg" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer (idéntico a index.html) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <a href="index.html"><img src="HILO LETRAS CREMA vertical TRANSP.png" alt="HiloLegal Logo" class="footer-logo"></a>
+                <p class="footer-tagline">El hilo que conecta cada pieza de tu vida con tu tranquilidad.</p>
+                <div class="footer-social"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 HiloLegal. Todos los derechos reservados.</p><div class="footer-links"><a href="#">Política de Privacidad</a><span>&bull;</span><a href="#">Términos y Condiciones</a></div></div>
+        </div>
+    </footer>
+    
+    <!-- Botones Flotantes y Back to Top (idénticos a index.html) -->
+    <div class="fab-container"><div class="fab fab-whatsapp" id="fabWhatsapp"><i class="fab fa-whatsapp"></i><span class="fab-tooltip">WhatsApp</span></div><div class="fab fab-phone" id="fabPhone"><i class="fas fa-phone"></i><span class="fab-tooltip">Llamar</span></div><div class="fab fab-email" id="fabEmail"><i class="fas fa-envelope"></i><span class="fab-tooltip">Email</span></div></div>
+    <button id="backToTop" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Script de la página -->
+    <script src="app-pages.js"></script>
+</body>
+</html>
